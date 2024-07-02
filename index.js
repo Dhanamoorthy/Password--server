@@ -15,7 +15,7 @@ import nodemailer from 'nodemailer';
 const app = express();
 dotenv.config();
 const corsOptions = {
-  origin: 'https://dulcet-custard-6a5a47.netlify.app/',
+  origin: ['https://dulcet-custard-6a5a47.netlify.app/'],
   credentials: true,  // <-- this is important to allow credentials (cookies, authorization headers)
 };
 
