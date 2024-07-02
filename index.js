@@ -81,7 +81,7 @@ app.post('/forgot-password', async (req, res) => {
     
     const secret = randomString + user.password;
     const token = jwt.sign({email:user.email, id:user._id},secret,{expiresIn: '5m'});
-    const link =`http://localhost:5000/reset-password/${user._id}/${token}`
+    const link =`https://password-server-7jsh.onrender.com/reset-password/${user._id}/${token}`
     
 
     console.log(link)
