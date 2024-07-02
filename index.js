@@ -14,12 +14,12 @@ import nodemailer from 'nodemailer';
 
 const app = express();
 dotenv.config();
-const corsOptions = {
-  origin: ['https://dulcet-custard-6a5a47.netlify.app/'],
-  credentials: true,  // <-- this is important to allow credentials (cookies, authorization headers)
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors({
+  origin: ['https://dulcet-custard-6a5a47.netlify.app/'],
+  credentials: true, 
+}));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());  // Middleware to parse JSON body
